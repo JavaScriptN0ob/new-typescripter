@@ -24,11 +24,17 @@ class ShoppingCart extends React.Component<Props, State> {
       <div className={styles.cartContainer}>
         <button
           className={styles.button}
+          onClick={() => 
+            this.setState({ isOpen: !this.state.isOpen }
+          )}
         >
           Shopping-cart 2 (items)
         </button>
         <div
           className={styles.cartDropDown}
+          style={{
+            display: this.state.isOpen ? 'block' : 'none'
+          }}
         >
           <ul>
             <li>robot 1</li>
